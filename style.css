@@ -1,3 +1,7 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
 body {
     background-color: rgb(207, 210, 205);
     font-family: 'Kanit', sans-serif;
@@ -10,16 +14,35 @@ h1 {
 
 h2 {
     color: rgb(74, 78, 105);
-    text-align: center;
-    font-size: 50px;
+        font-size: 50px;
 }
 
-.picture-center {
+
+.header {
     text-align: center;
+    border: 1px solid red;
 }
 
-.picture {
-    border-radius: 30px;
-    background-color: rgb (73, 80, 87);
-    background-size: 1000px;
+#name-header {
+    text-align: center;
+    border: 1px solid green
+
 }
+
+.header-left {
+    float: left;
+    background-color: rgb(52, 58, 64);
+    border: 1px solid green;
+    padding: 10px;
+    
+}
+.header-left img {
+   float: left;
+   height: 300px;
+}
+
+.header-rigth {
+    border: 1px solid green;
+    height: 320px;
+    padding: 10px;
+   }
