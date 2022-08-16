@@ -25,11 +25,14 @@ h3 {
 
 p {
     color: rgb(3, 4, 94);
+    font-weight: 300;
 }
 
 li {
     color: rgb(3, 4, 94);
+    list-style: square;
 }
+
 a {
     text-decoration: none;
     color: rgb(3, 4, 94);
@@ -38,22 +41,24 @@ a {
 
 a :hover {
     color: rgb(0, 180, 216);
+
 }
 
+
 .header {
+    background-color: rgba(173, 232, 244, 0.7);
     text-align: center;
-    border: 1px solid red;
+    margin: 10px;
 }
 
 #name-header {
     text-align: center;
-    border: 1px solid green
+
 }
 
 .header-left {
     float: left;
-    background-color: rgb(3, 4, 94);
-    border: 1px solid green;
+    background-color: rgba(3, 4, 94, 0.4);
     padding: 10px;
     top: ;
 }
@@ -64,7 +69,6 @@ a :hover {
 }
 
 .header-rigth {
-    border: 1px solid green;
     height: 320px;
     padding: 10px;
     top: 100px;
@@ -72,4 +76,21 @@ a :hover {
 
 .header p {
     font-size: large;
+}
+
+.about-me {
+    border: 1px solid red;
+    display: inline-block;
+}
+
+.hability {
+    border: 1px solid green;
+    margin: 2% 75% 3% 10%;
+    padding-right: 1000pix;
+    font-size: large;
+    float: left;
+}
+
+.curiosity {
+    border: 1px solid green;
 }
