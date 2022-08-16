@@ -2,21 +2,43 @@
     margin: 0%;
     padding: 0%;
 }
+
 body {
-    background-color: rgb(207, 210, 205);
+    background-image: url(imagens/17973908.jpg);
     font-family: 'Kanit', sans-serif;
+
 }
 
 h1 {
-    color: rgb(139, 140, 137);
+    color: rgb(2, 62, 138);
     text-align: center;
 }
 
 h2 {
-    color: rgb(74, 78, 105);
-        font-size: 50px;
+    color: rgb(0, 119, 182);
+    font-size: 50px;
 }
 
+h3 {
+    color: rgb(3, 4, 94);
+}
+
+p {
+    color: rgb(3, 4, 94);
+}
+
+li {
+    color: rgb(3, 4, 94);
+}
+a {
+    text-decoration: none;
+    color: rgb(3, 4, 94);
+    transition: 0.5s all;
+}
+
+a :hover {
+    color: rgb(0, 180, 216);
+}
 
 .header {
     text-align: center;
@@ -26,23 +48,28 @@ h2 {
 #name-header {
     text-align: center;
     border: 1px solid green
-
 }
 
 .header-left {
     float: left;
-    background-color: rgb(52, 58, 64);
+    background-color: rgb(3, 4, 94);
     border: 1px solid green;
     padding: 10px;
-    
+    top: ;
 }
+
 .header-left img {
-   float: left;
-   height: 300px;
+    float: left;
+    height: 320px;
 }
 
 .header-rigth {
     border: 1px solid green;
     height: 320px;
     padding: 10px;
-   }
+    top: 100px;
+}
+
+.header p {
+    font-size: large;
+}
