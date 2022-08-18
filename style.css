@@ -4,19 +4,28 @@
     border: 0px
 }
 body {
-    background-image: url(imagens/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg);
+    width: 100%;
+    background-color: rgb(225, 236, 247);
     background-size: 5600px;
     font-family: 'Raleway', sans-serif;
 }
 
 .header {
-    background-color: rgba(20, 142, 224, 0.562);
+    background-color: rgba(174, 203, 235);
     /* border: 1px solid red; */
-    text-align: center;
-    margin: 10px;
-    border-radius: 6px;
+        margin: 0px;
+     width: 100%;
+    position: fixed;
+    }
+.header h1 {
+    text-align: left;
+    float: left;
+    color: rgb(225, 236, 247);
+    
 }
-
-h1 {
-    color: rgb(2, 62, 138);
-}
+.header li {     
+    display: inline;
+    float: right;
+    margin: 1% 2%;
+    letter-spacing: 1px;
+    }
