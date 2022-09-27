@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif; 
+    background-color: #141313;
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 2.0rem;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    border-radius: 2px;
+    margin-right: 3px ;
+    padding: 10px 0;
+    background-color: #0e0a18;
+    box-shadow: 3px 3px #4717f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+   
+}
+
+.nav-links {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    min-width: 200px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color:#4717f5;
+    opacity: 0.7;
+    margin: 5px 0px;
+    transition-delay: 50ms;
+    cursor: pointer;
+    
+}
+
+a:hover {
+    opacity: 1;
+    text-decoration:underline;
+  
+}
+
+.header-logo{
+    width: 90%;
+    min-width: 243.09px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.header-logo i {
+    background-size: 50%;
+    margin-right: 40px;
+    font-size: 2.5em;
+    align-self: center;
+    color: #4717f5;
+}
+
+h1 {
+    color: white;
+    font-weight: 500;
+    flex-shrink: 1;
+    letter-spacing: 10px;
+    font-size:40px ;
+    }
+
+.profile {
+    box-shadow: 3px 3px #4717f5;
+    border-radius: 2px;
+    margin:120px auto 0px;
+    width: 100%;
+    text-align: center;
+    height: 855px;
+    background-color: black;
+    background-image: url(imagens/background-profile.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profile-content { 
+    padding: 30px;
+    border-radius: 2px;
+    background-color: #141313bb;
+    box-shadow: 3px 3px #4717f552;
+    display: flex;
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    overflow: auto;
+    margin: 20px;
+
+}
+
+.contact {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #141313;
+    padding: 10px;
+}
+
+.container {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+label span {
+    background-color: #4717f5;
+    height: 5px;
+    border-radius: 30px;
+    transition: 0.25s ease-in-out;
+}
+
+label:
