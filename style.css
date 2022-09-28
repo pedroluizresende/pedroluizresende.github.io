@@ -77,16 +77,16 @@ header {
 }
 
 .nav-links {
+    box-shadow: -3px 3px #4717f5;
     height: 1000px;
     position: relative;
-    top: 150px;
+    top: 153px;
     width: 70%;
-    border: 1px solid red;
     background-color: #0e0a18;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px;
 }
 
@@ -98,7 +98,7 @@ a {
     margin: 5px 0px;
     transition-delay: 50ms;
     cursor: pointer;
-    
+    font-size: 3rem;
 }
 
 a:hover {
