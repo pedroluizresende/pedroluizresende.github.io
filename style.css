@@ -29,7 +29,7 @@ header {
     background-color: #0e0a18;
     box-shadow: 3px 3px #4717f5;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -39,53 +39,55 @@ header {
 
 .header {
     display: flex;
-    flex-direction: column;
-    width: 80%;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: ;
     align-items: center;
     flex-wrap: nowrap;
+    padding-left: 15px;
    
 }
 
-.container {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.open-menu {
+    display: block;
 }
 
-#checkbox-menu {
-    position: absolute;
-    opacity: 0;
+.hamburguer-menu span {
+    color: #4717f5;
+    font-size: 10rem;
 }
 
-label {
+.close-menu {
+    display: none;
+}
+
+#burguer {
+    transition: 0.5s;
+    cursor: pointer; 
+    opacity: 0.7;   
+}
+
+#burguer:hover {
     cursor: pointer;
+    opacity: 1;
+}
+
+.menu-container {
     display: flex;
-    height: 100px;
-    width: 60%;
-    flex-direction: column;
-    justify-content: space-around;
-    
+    justify-content: flex-end;
 }
-
-label span {
-    background-color: #4717f5;
-    height: 12px;
-    border-radius: 30px;
-    transition: 0.25s ease-in-out;
-}
-
 
 .nav-links {
-    width: 30%;
+    height: 1000px;
+    position: relative;
+    top: 150px;
+    width: 70%;
+    border: 1px solid red;
+    background-color: #0e0a18;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    min-width: 200px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
 }
 
 a {
@@ -109,7 +111,7 @@ a:hover {
     width: 90%;
     min-width: 243.09px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
 }
