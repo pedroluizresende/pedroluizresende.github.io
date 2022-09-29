@@ -1,4 +1,4 @@
-const nav = document.getElementById('menu-container');
+const nav = document.getElementById('nav-links');
 const menu = document.querySelector('.hamburguer-menu')
 const openItem = document.querySelector('.open-menu');
 const closeItem = document.querySelector('.close-menu');

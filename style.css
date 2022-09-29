@@ -5,12 +5,13 @@
 }
 
 body {
-    max-width: 540px;
+    max-width: 100%;
     font-family: 'Raleway', sans-serif; 
     background-color: #141313;
     color: white;
     font-size: 16px;
-    font-weight: 200; 
+    font-weight: 200;
+    margin: 0px;
 }
 
 header {
@@ -76,6 +77,39 @@ header i {
 #nav-links-desktop {
     display: none;
 }
+
+#nav-links {
+    position: absolute;
+    padding: 20px;
+    top: 203px;
+    opacity: 0,7;
+    background-color: #0e0a18;
+    height: 915px;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    box-shadow: 3px 3px #4717f5;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color:#4717f5;
+    opacity: 0.5;
+    margin: 5px 0px;
+    transition-delay: 1s;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+a:hover {
+    opacity: 1;
+    text-decoration:underline;
+  
+}
+
 /* 
 header {
     font-size: 40px;
@@ -97,81 +131,16 @@ header {
     font-size: 3.5rem;
 }
 
-.header {
-    display: flex;
-    width: 100%;
-    justify-content: ;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding-left: 15px;
-   
-}
-
-.close-menu {
-    display: none;
-}
-
-#burguer {
-    transition: 0.5s;
-    cursor: pointer; 
-    opacity: 0.7;   
-}
 
 
 
-#menu-container {
-    display: none;
-    justify-content: flex-end;
-    height: 1037px;
-}
 
-#nav-links {
-    box-shadow: -3px 3px #4717f5;
-    height: 1000px;
-    position: relative;
-    top: 153px;
-    width: 90%;
-    background-color: #0e0a18;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding: 50px;
-}
 
-a {
-    text-decoration: none;
-    font-weight: 500;
-    color:#4717f5;
-    opacity: 0.7;
-    margin: 5px 0px;
-    transition-delay: 50ms;
-    cursor: pointer;
-    font-size: 3rem;
-}
 
-a:hover {
-    opacity: 1;
-    text-decoration:underline;
-  
-}
 
-.header-logo{
-    width: 90%;
-    min-width: 243.09px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-}
 
-.header-logo i {
-    background-size: 50%;
-    margin-right: 40px;
-    font-size: 2.5em;
-    align-self: center;
-    color: #4717f5;
-}
+
+
 
 h1 {
     color: white;
