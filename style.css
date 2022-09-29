@@ -84,9 +84,8 @@ header i {
     position: absolute;
     padding: 20px;
     top: 203px;
-    opacity: 0,7;
-    background-color: #0e0a18;
-    height: 1080px;
+    background-color: #0e0a18f8;
+    height: 1480px;
     width: 100%;
     display: none;
     flex-direction: column;
@@ -115,13 +114,12 @@ a:hover {
 
 .home {
     margin-top: 203px;
-    border: 1px solid red;
     top: 203px;
     box-shadow: 3px 3px #4717f5;
     border-radius: 2px;
     width: 100%;
     text-align: center;
-    height: 1080px;
+    height: 1480px;
     background-color: black;
     background-image: url(imagens/background-profile.jpg);
     background-size: cover;
