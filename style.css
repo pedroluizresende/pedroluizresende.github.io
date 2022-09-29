@@ -27,7 +27,7 @@ header {
     box-shadow: 3px 3px #4717f5;
 }
 
-header h1 {
+h1 {
     font-size: 4.5rem;
 }
 
@@ -86,7 +86,7 @@ header i {
     top: 203px;
     opacity: 0,7;
     background-color: #0e0a18;
-    height: 915px;
+    height: 1080px;
     width: 100%;
     display: none;
     flex-direction: column;
@@ -120,7 +120,7 @@ a:hover {
     border-radius: 2px;
     width: 100%;
     text-align: center;
-    height: 915px;
+    height: 1080px;
     background-color: black;
     background-image: url(imagens/background-profile.jpg);
     background-size: cover;
@@ -144,6 +144,10 @@ a:hover {
     overflow: auto;
     margin: 20px;
 
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
 }
 /* 
 header {
