@@ -2,12 +2,13 @@ import { Button, Typography } from '@mui/material';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../components/Header';
-import { CustomBox, CustomContainer } from '../styles/Home';
+import { CustomBox, CustomContainer, HomeContainer } from '../styles/Home';
+import Footer from '../components/Footer';
 
 function Home() {
   const history = useHistory();
   return (
-    <>
+    <HomeContainer>
       <Header />
       <CustomContainer maxWidth={ false }>
         <CustomBox>
@@ -34,7 +35,8 @@ function Home() {
         </CustomBox>
 
       </CustomContainer>
-    </>
+      <Footer />
+    </HomeContainer>
   );
 }
 

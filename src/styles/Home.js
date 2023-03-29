@@ -54,3 +54,7 @@ export const CustomBox = styled(Box)`
     height: calc(30% + 1px);
   }
 `;
+
+export const HomeContainer = styled('main')`
+  height: 100vh;
+`;
