@@ -22,7 +22,16 @@ const theme = createTheme({
   typography: {
     h1: {
       fontSize: '7rem',
-      margin: 0,
+      letterSpacing: '0.9rem',
+      fontWeight: 100,
+    },
+    h2: {
+      letterSpacing: '0.9rem',
+      fontWeight: 100,
+    },
+    h3: {
+      letterSpacing: '0.9rem',
+      fontWeight: 100,
     },
   },
 });
