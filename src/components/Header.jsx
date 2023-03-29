@@ -1,11 +1,21 @@
 import React from 'react';
+import { useTheme } from '@emotion/react';
+import { useMediaQuery } from '@mui/material';
 import { CustomAppBar, CustomLink,
   CustomToolbar, CustomTypography } from '../styles/Header';
+import SandwichMenu from './SandwichMenu';
 
 function Header() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <CustomAppBar position="static">
-      <CustomToolbar variant="regular">
+
+      { isSmallScreen && <SandwichMenu />}
+      <CustomToolbar
+        variant="regular"
+        sx={ { display: isSmallScreen ? 'none' : 'flex' } }
+      >
         <CustomLink to="/">
           <CustomTypography variant="h6" component="div">
             Home

@@ -8,11 +8,10 @@ export const CustomAppBar = styled(AppBar)`
 
 export const CustomTypography = styled(Typography)`
     font-weight: 400;
-    margin: 0 2rem
+    margin: 0 2rem;
 `;
 
 export const CustomToolbar = styled(Toolbar)`
-  display: flex;
   justify-content: flex-end;
   width: 90%;
   margin: auto;

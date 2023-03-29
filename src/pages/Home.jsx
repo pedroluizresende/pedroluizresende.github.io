@@ -1,4 +1,5 @@
-import { Button, Typography } from '@mui/material';
+import { Button, Typography, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../components/Header';
@@ -7,17 +8,25 @@ import Footer from '../components/Footer';
 
 function Home() {
   const history = useHistory();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <HomeContainer>
       <Header />
-      <CustomContainer maxWidth={ false }>
-        <CustomBox>
-          <Typography variant="h1" gutterBottom>
+      <CustomContainer
+        maxWidth={ false }
+        sx={ { marginTop: isSmallScreen ? '7.5rem' : '10rem' } }
+      >
+        <CustomBox
+          sx={ { height: isSmallScreen ? '20rem' : '30rem' } }
+        >
+          <Typography variant={ isSmallScreen ? 'h3' : 'h1' } gutterBottom>
             PEDRO RESENDE
           </Typography>
           <Typography
             color="#f1c40f"
-            variant="h5"
+            variant={ isSmallScreen ? 'h7' : 'h5' }
             gutterBottom
           >
             Desenvolvedor Web FullStack
@@ -30,10 +39,8 @@ function Home() {
             onClick={ () => history.push('/about') }
           >
             SAIBA MAIS
-
           </Button>
         </CustomBox>
-
       </CustomContainer>
       <Footer />
     </HomeContainer>

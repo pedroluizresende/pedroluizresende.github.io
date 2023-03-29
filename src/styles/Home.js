@@ -4,7 +4,6 @@ import { Container } from '@mui/system';
 
 export const CustomContainer = styled(Container)`
   width: 90%;
-  margin-top:10rem;
   display: flex;
   align-items: center;
   justify-content:center;
@@ -17,7 +16,6 @@ export const CustomBox = styled(Box)`
   max-width: 35rem;
   justify-content: center;
   flex-direction: column;
-  height: 30rem;
   align-items: center;
 
   &::before {

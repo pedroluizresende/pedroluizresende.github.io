@@ -10,7 +10,6 @@ export const CustomAppbar = styled('footer')`
   bottom: 0;
   width: 100%;
   padding: 3rem;
-  margin-top: 3rem;
 `;
 
 export const CustomToolbar = styled(Toolbar)`
