@@ -16,6 +16,22 @@ export const CustomToolbar = styled(Toolbar)`
   justify-content: flex-end;
   width: 90%;
   margin: auto;
+  position: relative;
+  :before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    width: 37%;
+    height: 1px;
+    background-color: ${({ theme }) => theme.palette.secondary.main};
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 1s ease-out;
+  }
+  :hover::before {
+    transform: scaleX(1);
+  }
 `;
 
 export const CustomLink = styled(Link)`

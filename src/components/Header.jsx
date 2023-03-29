@@ -6,10 +6,11 @@ function Header() {
   return (
     <CustomAppBar position="static">
       <CustomToolbar variant="regular">
-        <CustomTypography variant="h6" component="div">
-
-          <CustomLink to="/">Home</CustomLink>
-        </CustomTypography>
+        <CustomLink to="/">
+          <CustomTypography variant="h6" component="div">
+            Home
+          </CustomTypography>
+        </CustomLink>
         <CustomLink to="/projects">
           <CustomTypography variant="h6" component="div">
             Projetos
