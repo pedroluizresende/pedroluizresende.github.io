@@ -30,6 +30,7 @@ export const CustomBox = styled(Box)`
     width: 10%;
     height: 10%;
     transition: all 1s ease;
+    border-radius: 4px 0 0;
   }
 
   &::after {
@@ -42,6 +43,7 @@ export const CustomBox = styled(Box)`
     width: 10%;
     height: 10%;
     transition: all 1s ease;
+    border-radius: 0 0 4px;
   }
 
   &:hover::before {
