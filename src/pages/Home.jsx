@@ -19,28 +19,30 @@ function Home() {
         sx={ { marginTop: isSmallScreen ? '7.5rem' : '10rem' } }
       >
         <CustomBox
-          sx={ { height: isSmallScreen ? '20rem' : '30rem' } }
+          sx={ { height: isSmallScreen ? '9rem' : '20rem' } }
         >
           <Typography variant={ isSmallScreen ? 'h3' : 'h1' } gutterBottom>
             PEDRO RESENDE
           </Typography>
-          <Typography
-            color="#f1c40f"
-            variant={ isSmallScreen ? 'h7' : 'h5' }
-            gutterBottom
-          >
-            Desenvolvedor Web FullStack
-          </Typography>
 
-          <Button
-            sx={ { marginTop: '1rem', width: '9rem' } }
-            color="tertiary"
-            variant="outlined"
-            onClick={ () => history.push('/about') }
-          >
-            SAIBA MAIS
-          </Button>
         </CustomBox>
+        <Typography
+          color="#f1c40f"
+          variant={ isSmallScreen ? 'h7' : 'h5' }
+          gutterBottom
+          sx={ { marginTop: '5rem' } }
+        >
+          Desenvolvedor Web FullStack
+        </Typography>
+
+        <Button
+          sx={ { marginTop: '1rem', width: '9rem' } }
+          color="tertiary"
+          variant="outlined"
+          onClick={ () => history.push('/about') }
+        >
+          SAIBA MAIS
+        </Button>
       </CustomContainer>
       <Footer />
     </HomeContainer>
