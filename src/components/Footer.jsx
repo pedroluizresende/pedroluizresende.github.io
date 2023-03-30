@@ -22,7 +22,7 @@ function Footer() {
             sx={ { transition: '0.5s', ':hover': { color: '#f1c40f' } } }
           />
         </a>
-        <a href="https://www.linkedin.com/in/pedro-luiz-resende/" target="_blank" rel="noreferrer">
+        <a href="https://github.com/pedroluizresende" target="_blank" rel="noreferrer">
           <GitHubIcon
             fontSize="large"
             color="secondary"
