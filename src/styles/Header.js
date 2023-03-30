@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export const CustomAppBar = styled(AppBar)`
@@ -37,6 +37,29 @@ export const CustomLink = styled(Link)`
   text-decoration: none;
   color: #ecf0f1;
   transition: 0.5s;
+  :hover {
+    color:#f1c40f;
+  }
+`;
+
+export const CustomButton = styled('button')`
+  text-transform: none;
+  background:  none;
+  border: none;
+  color: ${({ theme }) => theme.palette.text.primary};
+  cursor: pointer;
+  :hover {
+    background:  none;
+    color:#f1c40f;
+  }
+`;
+
+export const CustomMenu = styled(Menu)`
+  margin-left: 1.5rem;
+`;
+
+export const CustomMenuItem = styled(MenuItem)`
+  color: ${({ theme }) => theme.palette.text.tertiary};
   :hover {
     color:#f1c40f;
   }

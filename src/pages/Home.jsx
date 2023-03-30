@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import Header from '../components/Header';
 import { CustomBox, CustomContainer, HomeContainer } from '../styles/Home';
 import Footer from '../components/Footer';
+import 'animate.css';
 
 function Home() {
   const history = useHistory();
@@ -21,10 +22,20 @@ function Home() {
         <CustomBox
           sx={ { height: isSmallScreen ? '9rem' : '20rem' } }
         >
-          <Typography variant={ isSmallScreen ? 'h3' : 'h1' } gutterBottom>
-            PEDRO RESENDE
+          <Typography
+            className="animate__animated animate__fadeInLeft"
+            variant={ isSmallScreen ? 'h3' : 'h1' }
+            gutterBottom
+          >
+            PEDRO
           </Typography>
-
+          <Typography
+            className="animate__animated animate__fadeInRight"
+            variant={ isSmallScreen ? 'h3' : 'h1' }
+            gutterBottom
+          >
+            RESENDE
+          </Typography>
         </CustomBox>
         <Typography
           color="#f1c40f"

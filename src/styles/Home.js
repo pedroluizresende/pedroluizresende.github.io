@@ -17,6 +17,7 @@ export const CustomBox = styled(Box)`
   max-width: 35rem;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   h3 {
     margin: 0;
   }
@@ -32,7 +33,7 @@ export const CustomBox = styled(Box)`
     border-top: 0 solid ${({ theme }) => theme.palette.secondary.main};
     border-left: 0 solid ${({ theme }) => theme.palette.secondary.main};
     width: 0;
-    transition: all 2s ease;
+    transition: all 1s ease;
     border-radius: 4px 0 0;
   }
 

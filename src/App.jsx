@@ -12,7 +12,9 @@ function App() {
         <Route exact path="/" component={ Home } />
         <Route exact path="/about" component={ About } />
         <Route exact path="/contact" component={ Contact } />
-        <Route exact path="/projects" component={ Projects } />
+        <Route exact path="/projects/front-end" component={ Projects } />
+        <Route exact path="/projects/back-end" component={ Projects } />
+        <Route exact path="/projects/full-stack" component={ Projects } />
       </Switch>
     </CssBaseline>
   );

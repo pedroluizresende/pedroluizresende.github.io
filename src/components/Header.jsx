@@ -4,6 +4,7 @@ import { useMediaQuery } from '@mui/material';
 import { CustomAppBar, CustomLink,
   CustomToolbar, CustomTypography } from '../styles/Header';
 import SandwichMenu from './SandwichMenu';
+import LinkProjects from './LinkProjects';
 
 function Header() {
   const theme = useTheme();
@@ -21,11 +22,7 @@ function Header() {
             Home
           </CustomTypography>
         </CustomLink>
-        <CustomLink to="/projects">
-          <CustomTypography variant="h6" component="div">
-            Projetos
-          </CustomTypography>
-        </CustomLink>
+        <LinkProjects />
         <CustomLink to="/about">
           <CustomTypography variant="h6" component="div">
             Sobre

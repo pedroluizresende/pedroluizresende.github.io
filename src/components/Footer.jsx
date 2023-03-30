@@ -8,6 +8,7 @@ import { CustomAppbar, CustomToolbar } from '../styles/Footer';
 function Footer() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <CustomAppbar
       position="fixed"
