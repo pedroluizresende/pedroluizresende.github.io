@@ -1,15 +1,14 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import Header from '../components/Header';
+import { AboutContainer } from '../styles/About';
 
 function About() {
   return (
-    <div>
-      <Header />
-      <Typography variant="h1" gutterBottom>
-        Sobre
+    <AboutContainer>
+      <Typography color="primary" variant="h1" gutterBottom id="about">
+        sei la
       </Typography>
-    </div>
+    </AboutContainer>
   );
 }
 
