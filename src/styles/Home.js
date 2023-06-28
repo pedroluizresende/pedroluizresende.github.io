@@ -8,6 +8,7 @@ export const CustomContainer = styled(Container)`
   align-items: center;
   justify-content:center;
   flex-direction: column;
+  padding-bottom: 240px;
 `;
 
 export const CustomBox = styled(Box)`
@@ -17,6 +18,7 @@ export const CustomBox = styled(Box)`
   max-width: 35rem;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   h3 {
     margin: 0;
   }
@@ -32,7 +34,7 @@ export const CustomBox = styled(Box)`
     border-top: 0 solid ${({ theme }) => theme.palette.secondary.main};
     border-left: 0 solid ${({ theme }) => theme.palette.secondary.main};
     width: 0;
-    transition: all 2s ease;
+    transition: all 1s ease;
     border-radius: 4px 0 0;
   }
 
