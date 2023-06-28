@@ -1,7 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
 import Home from './pages/Home';
-import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 
@@ -10,7 +9,6 @@ function App() {
     <CssBaseline>
       <Switch>
         <Route exact path="/" component={ Home } />
-        <Route exact path="/about" component={ About } />
         <Route exact path="/contact" component={ Contact } />
         <Route exact path="/projects/front-end" component={ Projects } />
         <Route exact path="/projects/back-end" component={ Projects } />

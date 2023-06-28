@@ -8,6 +8,7 @@ export const CustomContainer = styled(Container)`
   align-items: center;
   justify-content:center;
   flex-direction: column;
+  padding-bottom: 240px;
 `;
 
 export const CustomBox = styled(Box)`
