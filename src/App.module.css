@@ -1,0 +1,26 @@
+@import './styles/global-variables.css';
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: var(--secondary-color);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+h1 {
+  letter-spacing: 0.3rem;
+}
+
+h2 {
+  letter-spacing: 0.2rem;
+}

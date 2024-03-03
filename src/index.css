@@ -1,3 +1,4 @@
+@import './styles/global-variables.css';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -18,27 +19,35 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}article, aside, details, figcaption, figure, 
+	box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 	font-family: 'Kanit', sans-serif;
-	width: 100vw;
-	height: 100vh;
+	background-color:black;
+	width: 100vw; /* Alterado para 100% da largura da viewport */
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
