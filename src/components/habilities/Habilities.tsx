@@ -3,6 +3,7 @@ import { IoLogoJavascript } from 'react-icons/io5';
 import { SiTypescript } from 'react-icons/si';
 import { DiMysql } from 'react-icons/di';
 import styles from './Habilities.module.css';
+import Reveal from '../reveal/Reveal';
 
 function Habilities() {
   const habilities = [
@@ -42,15 +43,21 @@ function Habilities() {
 
   return (
     <div className={ styles.habilities }>
-      <h2>Habilidades</h2>
+      <Reveal>
+        <h2>Habilidades</h2>
+      </Reveal>
 
       <ul>
         { habilities.map((hability, index) => (
           <li key={ index }>
-            { hability.icon }
-            <p>
-              { hability.name }
-            </p>
+            <Reveal type="left">
+              { hability.icon }
+            </Reveal>
+            <Reveal>
+              <p>
+                { hability.name }
+              </p>
+            </Reveal>
           </li>
         )) }
       </ul>

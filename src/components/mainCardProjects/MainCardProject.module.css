@@ -1,0 +1,97 @@
+.mainCardProject {
+  min-width: 250px;
+  width: 20vw;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.mainCardProject:hover {
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.details {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.details h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.banner:hover::before {
+  display: none;
+}
+
+.banner::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.875);
+}
+
+.banner::after {
+  content: "";
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    bottom: 0.1rem;
+    background-color: var(--secondary-color);
+}
+
+.banner:hover::after {
+  display: block;
+}
+
+.description {
+  border-top: none;
+  padding: 1.5rem, 2rem, 1.2rem, 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  border-radius: 0 0 5px 5px;
+}
+
+.description ul {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description ul li {
+  font-size: 12px;
+  border: 5px;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: black
+}
+
+.description a {
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.description a:hover {
+  background-color: var(--secondary-color);
+  color: black;
+}

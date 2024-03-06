@@ -30,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Kanit', sans-serif;
-	background-color:black;
 	width: 100vw; /* Alterado para 100% da largura da viewport */
 }
 
