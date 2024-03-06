@@ -1,0 +1,99 @@
+/* Estilos para o cabeçalho */
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 6rem;
+  z-index: 1;
+  top: 0;
+}
+
+/* Estilos para o título no cabeçalho */
+.header h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--secondary-color);
+  margin-bottom: 5px;
+}
+
+/* Estilos para a navegação no cabeçalho */
+.header nav {
+  justify-content: flex-end;
+  display: flex;
+}
+
+/* Estilos para os botões de navegação */
+.header nav button {
+  padding: 0;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  transition: transform 0.5s;
+  background: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  cursor: pointer;
+  position: relative;
+}
+
+/* Estilos para o botão de navegação quando desativado */
+.header nav button:disabled {
+  color: var(--primary-color);
+  cursor: not-allowed;
+}
+
+/* Efeito de escala no botão de navegação ao passar o mouse */
+.header nav button:hover {
+  transform: scale(1.1);
+}
+
+/* Efeito de linha sob o botão de navegação ao passar o mouse */
+.header nav button::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: var(--secondary-color);
+  transition: width 0.5s ease;
+}
+
+/* Aumenta a largura da linha sob o botão de navegação ao passar o mouse */
+.header nav button:hover::after {
+  width: 100%;
+}
+
+/* Estilos para o botão de navegação desativado quando passar o mouse */
+.header nav button:disabled:hover {
+  transform: scale(1);
+  cursor: not-allowed;
+  color: var(--primary-color);  
+}
+
+/* Esconde a linha sob o botão de navegação desativado */
+.header nav button:disabled::after {
+  display: none;
+}
+
+
+.visuallyHidden {
+  position: absolute;
+  background-color: var(--primary-color);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 12px;
+  letter-spacing: 0;
+  bottom: -30px;
+  opacity: 1;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.visuallyHidden:hover {
+  opacity: 1;
+  transition: opacity 0.5s;
+}

@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--black);
+    width: 100%;
+    position: relative;
+    top: -93px;
+}
+
+.welcome {
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 96px 0;
+    justify-content: center;
+    position: relative;
+}
+
+
+.welcome h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 0;
+    margin: 150px 0 40px;
+}
+
+.welcome h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 0.1rem;
+}
+
+.welcome p {
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.arrowBtn {
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 3rem;
+    font-weight: 700;
+    animation: upAndDown 1s infinite;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    padding: 0;
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.link:hover {
+    scale: 1.1;
+}
+
+
+.row {
+    border-bottom: 2px solid var(--secondary-color);
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: -4.2%;
+    height: 100px;
+    rotate: 45deg;
+
+}
+
+.row2 {
+    border-bottom: 8px solid var(--primary-color);
+    width: 40%;
+    position: absolute;
+    rotate: 45deg;
+    left: -10%;
+    bottom: 0;
+    height: 100px;
+}
+
+.row3 {
+    border: 2px solid var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    right: 10%;
+}
+
+.row4 {
+    border: 4px solid var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    right: 5%;
+}
+
+.show {
+    opacity: 1 !important;
+}
+
+
+
+:global(.about) {
+    width: 100%;
+}
