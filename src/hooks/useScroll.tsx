@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function useScroll() {
   const [elementPosition, setElementPosition] = useState({ bottom: 1000, left: 0 });

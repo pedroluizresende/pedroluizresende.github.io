@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { SiStyleshare } from 'react-icons/si';
 import styles from './MainCardProject.module.css';
 import IProjects from '../../data/IProjects';
+import Reveal from '../reveal/Reveal';
 
 function MainCardProject({ project }: { project: IProjects }) {
   const [showMore, setShowMore] = useState(false);
@@ -30,26 +30,38 @@ function MainCardProject({ project }: { project: IProjects }) {
       <div
         className={ styles.banner }
       >
-        <img src={ project.images } alt={ project.title } />
+        <Reveal type="left" width="100%">
+          <img src={ project.images } alt={ project.title } />
+        </Reveal>
         <div className={ styles.details }>
+
           {
-            !showMore && <h3>{ project.title }</h3>
+            !showMore
+            && (
+              <Reveal><h3>{ project.title }</h3></Reveal>
+            )
           }
+
         </div>
       </div>
 
       {
         showMore
         && (
+
           <div className={ styles.description }>
             <ul>
               {
-        project.tags.map((tag) => (
-          <li className={ styles.tag } key={ tag }>{ tag }</li>
-        ))
-        }
+                project.tags.map((tag) => (
+                  <Reveal key={ tag }>
+                    <li className={ styles.tag } key={ tag }>{ tag }</li>
+                  </Reveal>
+                ))
+                }
             </ul>
-            <Link to={ `/project/${project.id}` }>Ver mais</Link>
+            <Reveal>
+              <Link to={ `/project/${project.id}` }>Ver mais</Link>
+            </Reveal>
           </div>
         )
       }

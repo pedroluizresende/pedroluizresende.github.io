@@ -1,5 +1,5 @@
-import { GoArrowDown, GoArrowUp } from 'react-icons/go';
-import { useEffect, useRef, useState } from 'react';
+import { GoArrowDown } from 'react-icons/go';
+// import { useRef } from 'react'
 import styles from './Home.module.css';
 import About from '../../components/about/About';
 import MainProjects from '../../components/mainProjects/MainProjects';
@@ -8,10 +8,6 @@ import Reveal from '../../components/reveal/Reveal';
 
 function Home() {
   const { scrollToSection } = useScroll();
-
-  const ref = useRef<HTMLDivElement>(null);
-
-  const elementRef = useRef(null);
 
   return (
     <main

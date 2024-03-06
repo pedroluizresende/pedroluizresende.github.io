@@ -3,9 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://pedroluizresende.github.io/",
   "scripts": {
     "dev": "vite --open",
     "build": "tsc && vite build",
+    "deploy": "npm run build && gh-pages -d dist",
     "preview": "vite preview",
     "lint": "eslint -c .eslintrc.json . --ext .js,.jsx,.ts,.tsx"
   },
@@ -27,6 +29,7 @@
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.55.0",
+    "gh-pages": "^6.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }

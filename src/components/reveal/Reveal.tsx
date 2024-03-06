@@ -53,7 +53,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
       rightControls.start('hidden');
       leftControls.start('hidden');
     }
-  }, [isInView]);
+  }, [isInView, mainControls, upControls, rightControls, leftControls]);
 
   if (type === 'up') {
     return (

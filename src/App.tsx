@@ -7,7 +7,6 @@ import Header from './components/header/Header';
 import Projects from './pages/Home/Projects';
 import Footer from './components/footer./Footer';
 import useScroll from './hooks/useScroll';
-import Reveal from './components/reveal/Reveal';
 
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false);

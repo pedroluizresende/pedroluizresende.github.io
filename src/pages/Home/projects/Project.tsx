@@ -1,9 +1,12 @@
-import React from 'react';
 import styles from './Projects.module.css';
 
 function Project() {
   return (
-    <div>Project</div>
+    <div
+      className={ styles.container }
+    >
+      Project
+    </div>
   );
 }
 
