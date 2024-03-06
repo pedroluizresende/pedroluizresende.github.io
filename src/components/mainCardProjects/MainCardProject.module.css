@@ -34,11 +34,7 @@
     font-weight: 500;
 }
 
-.banner:hover::before {
-  display: none;
-}
-
-.banner::before {
+.imgReveal::before {
   content: '';
   display: block;
   position: absolute;
@@ -47,7 +43,13 @@
   background-color: rgba(0, 0, 0, 0.875);
 }
 
-.banner::after {
+
+.imgReveal:hover::before {
+  display: none;
+}
+
+
+.imgReveal::after {
   content: "";
     display: none;
     position: absolute;
@@ -57,7 +59,7 @@
     background-color: var(--secondary-color);
 }
 
-.banner:hover::after {
+.imgReveal:hover::after {
   display: block;
 }
 

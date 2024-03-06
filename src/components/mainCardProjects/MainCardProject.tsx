@@ -30,7 +30,11 @@ function MainCardProject({ project }: { project: IProjects }) {
       <div
         className={ styles.banner }
       >
-        <Reveal type="left" width="100%">
+        <Reveal
+          type="left"
+          width="100%"
+          className={ styles.imgReveal }
+        >
           <img src={ project.images } alt={ project.title } />
         </Reveal>
         <div className={ styles.details }>
@@ -38,7 +42,7 @@ function MainCardProject({ project }: { project: IProjects }) {
           {
             !showMore
             && (
-              <Reveal><h3>{ project.title }</h3></Reveal>
+              <Reveal type="left"><h3>{ project.title }</h3></Reveal>
             )
           }
 

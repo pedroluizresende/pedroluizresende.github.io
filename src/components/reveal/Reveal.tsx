@@ -7,10 +7,11 @@ interface Props {
   duration?: number;
   delay?: number;
   type?: 'up' | 'down' | 'right' | 'left';
+  className?: string;
 }
 
 function Reveal({ children, width = 'fit-content', duration = 0.5,
-  delay = 0.25, type = 'down',
+  delay = 0.25, type = 'down', className = '',
 }: Props) {
   const variants = {
     hidden: { opacity: 0, y: 75 },
@@ -58,6 +59,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
   if (type === 'up') {
     return (
       <motion.div
+        className={ className }
         ref={ ref }
         style={ { position: 'relative', width, overflow: 'hidden' } }
         variants={ upVariants }
@@ -73,6 +75,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
   if (type === 'right') {
     return (
       <motion.div
+        className={ className }
         ref={ ref }
         style={ { position: 'relative', width, overflow: 'hidden' } }
         variants={ rightVariants }
@@ -88,6 +91,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
   if (type === 'left') {
     return (
       <motion.div
+        className={ className }
         ref={ ref }
         style={ { position: 'relative', width, overflow: 'hidden' } }
         variants={ leftVariants }
@@ -102,6 +106,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
 
   return (
     <motion.div
+      className={ className }
       ref={ ref }
       style={ { position: 'relative', width, overflow: 'hidden' } }
       variants={ variants }
