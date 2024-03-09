@@ -7,6 +7,7 @@ import Header from './components/header/Header';
 import Projects from './pages/Home/Projects';
 import Footer from './components/footer./Footer';
 import useScroll from './hooks/useScroll';
+import Contact from './pages/Contact';
 
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -38,8 +39,9 @@ function App() {
       }
       <Header />
       <Routes>
-        <Route path="/" element={ <Home /> } />
         <Route path="/projetos" element={ <Projects /> } />
+        <Route path="/contato" element={ <Contact /> } />
+        <Route path="/" element={ <Home /> } />
       </Routes>
       <Footer />
     </main>

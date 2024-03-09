@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 
 interface Props {
   children: JSX.Element;
-  width?: 'fit-content' | '100%';
+  width?: 'fit-content' | '100%' | '50%';
   duration?: number;
   delay?: number;
   type?: 'up' | 'down' | 'right' | 'left';

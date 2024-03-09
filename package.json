@@ -19,7 +19,8 @@
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "react-router-dom": "^6.21.0"
+    "react-router-dom": "^6.21.0",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@trybe/eslint-config-frontend": "^1.11.4",

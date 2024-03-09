@@ -1,0 +1,39 @@
+.contactMethods {
+  display: flex;
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.contactMethods form {
+  width: 100%;
+  padding: 3rem;
+}
+
+.contactMethods form button {
+  width: 100px;
+  height: 45px;
+  border: none;
+  background-color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: var(--secondary-color) 1px solid;
+  align-self: flex-end;
+  color: var(--secondary-color);
+}
+
+
+.contactMethods form button:hover {
+  background-color: var(--secondary-color);
+  color: var(--black);
+}
+
+.contactMethods form button:disabled {
+  background-color: var(--black);
+  border: none;
+  color: var(--primary-color);
+  cursor: not-allowed;
+}
