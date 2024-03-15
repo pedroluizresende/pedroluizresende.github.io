@@ -1,0 +1,30 @@
+.textArea {
+  width: 100%;
+
+
+
+  textarea {
+    width: calc(100% - 20px);
+    background-color: var(--black);
+    border: none;
+    border: 1px solid var(--primary-color);
+    outline: none;
+    color: var(--secondary-color);
+    letter-spacing: 0.1rem;
+    transform: 0.5s;
+    margin: 10px 0 20px;
+    padding: 10px 10px;
+    min-height: 150px;
+    border-radius: 5px;
+  }
+
+
+
+  textarea::placeholder {
+    color: var(--primary-color);
+  }
+  
+  textarea:focus {
+    border: 1px solid var(--secondary-color);
+  }
+}

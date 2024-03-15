@@ -17,9 +17,9 @@ function Header() {
           Pedro.Resende
         </h1>
       </Reveal>
+
       <nav>
         <Reveal type="right">
-
           <button
             onClick={ () => navigate('/') }
             disabled={ currentPath === '/' }
@@ -33,27 +33,6 @@ function Header() {
         </Reveal>
 
         <Reveal type="right">
-
-          <button
-            onClick={ () => navigate('/contato') }
-            disabled={ currentPath === '/contato' }
-          >
-            {
-            currentPath === '/contato'
-            && (
-              <span
-                className={ styles.visuallyHidden }
-              >
-                Você já esta na página contato
-              </span>
-            )
-          }
-
-            Contato
-          </button>
-        </Reveal>
-        <Reveal type="right">
-
           <button
             onClick={ () => navigate('/projetos') }
             disabled={ currentPath === '/projetos' }
@@ -68,8 +47,26 @@ function Header() {
               </span>
             )
           }
-
             Projetos
+          </button>
+        </Reveal>
+
+        <Reveal type="right">
+          <button
+            onClick={ () => navigate('/contato') }
+            disabled={ currentPath === '/contato' }
+          >
+            {
+            currentPath === '/contato'
+            && (
+              <span
+                className={ styles.visuallyHidden }
+              >
+                Você já esta na página contato
+              </span>
+            )
+          }
+            Contato
           </button>
         </Reveal>
       </nav>

@@ -1,0 +1,90 @@
+.contactMethods {
+  display: flex;
+  width: 100%;
+  padding: 0 3rem;
+  border: 1px solid greens;
+  position: relative;
+  align-items: center;
+}
+
+.contactMethods form {
+  width: 100%;
+  padding: 3rem;
+}
+
+.contactMethods form button {
+  width: 100px;
+  height: 45px;
+  border: none;
+  background-color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: var(--secondary-color) 1px solid;
+  align-self: flex-end;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contactMethods form button:hover {
+  background-color: var(--secondary-color);
+  color: var(--black);
+}
+
+.contactMethods form button:disabled {
+  background-color: var(--black);
+  border: none;
+  color: var(--primary-color);
+  cursor: not-allowed;
+}
+
+.contactMethods span {
+  color: rgb(14, 110, 14);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+.error{
+  color: rgb(150, 31, 31) !important;
+}
+
+.others {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem ;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.others a {
+  display: flex;
+  align-items: center;
+}
+
+hr {  
+  border: 1px solid var(--primary-color);
+  height: 80%;
+}
+
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

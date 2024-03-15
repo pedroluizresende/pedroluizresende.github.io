@@ -10,7 +10,7 @@
 
 .projectsList {
   width: 80%;
-  margin-top: 9.5rem;
+  margin-top: 6rem;
   display: flex;
   gap: 3.3rem;
   flex-wrap: wrap;
@@ -19,19 +19,21 @@
 }
 
 .mainProjects h2{
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 6rem;
   z-index: 1;
+  text-transform: uppercase;
 }
 
 .moreProjects {
-  margin-top: 9.5rem;
+  margin-top: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
   gap: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
   color: var(--secondary-color);
   cursor: pointer;
 }

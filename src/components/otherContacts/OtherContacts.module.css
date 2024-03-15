@@ -1,0 +1,40 @@
+.others {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem ;
+  height: 515px;
+}
+
+.others a {
+  display: flex;
+  align-items: center;
+  border: 1px solid ridge;
+  margin: 20px 0 0;
+  transition: all 0.3s ease;
+}
+
+.others a:hover {
+  scale: 1.1;
+}
+
+.others a svg {
+  margin-right: 1rem;
+  font-size: 30px;
+}
+
+.others a p {
+  text-transform: none;
+}
+
+.others h3 {
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 40px;
+}
