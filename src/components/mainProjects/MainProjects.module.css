@@ -6,6 +6,7 @@
   justify-self: center;
   position: relative;
   padding: 0 6rem 6rem;
+  min-height: 727px;
 }
 
 .projectsList {
