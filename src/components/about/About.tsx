@@ -3,10 +3,17 @@ import styles from './About.module.css';
 import Habilities from '../habilities/Habilities';
 import useScroll from '../../hooks/useScroll';
 import Reveal from '../reveal/Reveal';
+import resume from '../../files/Pedro-Resende-CV.pdf';
 
-function About({ id, hRef }: { id: string,
-  hRef: string }) {
+function About({ id, hRef }: {
+  id: string,
+  hRef: string
+}) {
   const { scrollToSection } = useScroll();
+
+  const handleDownloadCv = () => {
+    window.open(resume, '_blsank');
+  };
 
   return (
     <section id={ id } className={ `about ${styles.about} ` }>
@@ -43,6 +50,14 @@ function About({ id, hRef }: { id: string,
       </Reveal>
 
       <Habilities />
+      <Reveal>
+        <button
+          className={ styles.resumeButton }
+          onClick={ handleDownloadCv }
+        >
+          Currículo
+        </button>
+      </Reveal>
 
       <Reveal delay={ 1 } duration={ 0.25 } type="up">
         <button
@@ -53,6 +68,7 @@ function About({ id, hRef }: { id: string,
           <GoArrowDown />
         </button>
       </Reveal>
+
     </section>
   );
 }
