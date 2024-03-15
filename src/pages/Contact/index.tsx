@@ -7,18 +7,13 @@ function Contact() {
     <main
       className={ styles.container }
     >
+
       <Reveal>
         <h1
           id="first-section"
         >
-          Contato
-        </h1>
-      </Reveal>
-
-      <Reveal>
-        <h2>
           Ficou interessado no meu trabalho?
-        </h2>
+        </h1>
       </Reveal>
       <Reveal>
         <h2>

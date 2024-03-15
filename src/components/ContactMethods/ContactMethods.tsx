@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import userSWR from 'swr';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import axios from 'axios';
 import Reveal from '../reveal/Reveal';
 import Form from '../Form';
 import Input from '../Input';
 import styles from './ContactMethods.module.css';
 import TextArea from '../TextArea/TextArea';
+import OtherContacts from '../otherContacts/OtherContacts';
 
 function ContactMethods() {
   const [inputValues, setInputValues] = useState({
@@ -14,10 +16,29 @@ function ContactMethods() {
     message: '',
   });
   const [isDisabled, setIsDisabled] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [requestMsg, setRequestMsg] = useState<string | null>(null);
 
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLoading(true);
 
+    try {
+      const apiUrl = import.meta.env.VITE_API_URL;
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      const response = await axios.post(`${apiUrl}email/send-email`, inputValues);
+
+      console.log(response);
+
+      setError(null);
+      setRequestMsg(response.data.message);
+      setError(null);
+    } catch {
+      setError('Erro ao tentar enviar mensagem');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (
@@ -86,14 +107,34 @@ function ContactMethods() {
             placeHolder="Sua Mensagem"
           />
 
+          {
+          requestMsg && <span>{ requestMsg }</span>
+          }
+
+          {
+            error && <span className={ styles.error }>{error}</span>
+          }
+
           <button
             type="submit"
             disabled={ isDisabled }
           >
-            Enviar
+            {
+                  isLoading ? <AiOutlineLoading3Quarters
+                    className={ styles.loading }
+                  /> : 'Enviar'
+                 }
           </button>
 
         </Form>
+      </Reveal>
+
+      <Reveal delay={ 0.75 } width="fit-content" height="80%">
+        <hr />
+      </Reveal>
+
+      <Reveal type="right" delay={ 0.75 } width="50%">
+        <OtherContacts />
       </Reveal>
 
     </section>

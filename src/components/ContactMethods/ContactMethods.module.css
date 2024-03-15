@@ -2,6 +2,9 @@
   display: flex;
   width: 100%;
   padding: 0 3rem;
+  border: 1px solid greens;
+  position: relative;
+  align-items: center;
 }
 
 .contactMethods form {
@@ -23,6 +26,9 @@
   border: var(--secondary-color) 1px solid;
   align-self: flex-end;
   color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -36,4 +42,49 @@
   border: none;
   color: var(--primary-color);
   cursor: not-allowed;
+}
+
+.contactMethods span {
+  color: rgb(14, 110, 14);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+.error{
+  color: rgb(150, 31, 31) !important;
+}
+
+.others {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem ;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.others a {
+  display: flex;
+  align-items: center;
+}
+
+hr {  
+  border: 1px solid var(--primary-color);
+  height: 80%;
+}
+
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

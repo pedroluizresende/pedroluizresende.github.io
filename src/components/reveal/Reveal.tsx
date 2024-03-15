@@ -8,10 +8,11 @@ interface Props {
   delay?: number;
   type?: 'up' | 'down' | 'right' | 'left';
   className?: string;
+  height?: 'fit-content' | '100%' | '80%' | '50%';
 }
 
 function Reveal({ children, width = 'fit-content', duration = 0.5,
-  delay = 0.25, type = 'down', className = '',
+  delay = 0.25, type = 'down', className = '', height = 'fit-content',
 }: Props) {
   const variants = {
     hidden: { opacity: 0, y: 75 },
@@ -61,7 +62,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
       <motion.div
         className={ className }
         ref={ ref }
-        style={ { position: 'relative', width, overflow: 'hidden' } }
+        style={ { position: 'relative', width, overflow: 'hidden', height } }
         variants={ upVariants }
         initial="hidden"
         animate={ upControls }
@@ -77,7 +78,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
       <motion.div
         className={ className }
         ref={ ref }
-        style={ { position: 'relative', width, overflow: 'hidden' } }
+        style={ { position: 'relative', width, overflow: 'hidden', height } }
         variants={ rightVariants }
         initial="hidden"
         animate={ rightControls }
@@ -93,7 +94,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
       <motion.div
         className={ className }
         ref={ ref }
-        style={ { position: 'relative', width, overflow: 'hidden' } }
+        style={ { position: 'relative', width, overflow: 'hidden', height } }
         variants={ leftVariants }
         initial="hidden"
         animate={ leftControls }
@@ -108,7 +109,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
     <motion.div
       className={ className }
       ref={ ref }
-      style={ { position: 'relative', width, overflow: 'hidden' } }
+      style={ { position: 'relative', width, overflow: 'hidden', height } }
       variants={ variants }
       initial="hidden"
       animate={ mainControls }
