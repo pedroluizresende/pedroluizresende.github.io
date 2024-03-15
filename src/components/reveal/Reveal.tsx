@@ -62,7 +62,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
       <motion.div
         className={ className }
         ref={ ref }
-        style={ { position: 'relative', width, overflow: 'hidden', height } }
+        style={ { position: 'relative', width, overflow: 'hidden' } }
         variants={ upVariants }
         initial="hidden"
         animate={ upControls }
@@ -78,7 +78,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
       <motion.div
         className={ className }
         ref={ ref }
-        style={ { position: 'relative', width, overflow: 'hidden', height } }
+        style={ { position: 'relative', width, overflow: 'hidden' } }
         variants={ rightVariants }
         initial="hidden"
         animate={ rightControls }
@@ -94,7 +94,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
       <motion.div
         className={ className }
         ref={ ref }
-        style={ { position: 'relative', width, overflow: 'hidden', height } }
+        style={ { position: 'relative', width, overflow: 'hidden' } }
         variants={ leftVariants }
         initial="hidden"
         animate={ leftControls }
@@ -109,7 +109,7 @@ function Reveal({ children, width = 'fit-content', duration = 0.5,
     <motion.div
       className={ className }
       ref={ ref }
-      style={ { position: 'relative', width, overflow: 'hidden', height } }
+      style={ { position: 'relative', width, overflow: 'hidden' } }
       variants={ variants }
       initial="hidden"
       animate={ mainControls }
