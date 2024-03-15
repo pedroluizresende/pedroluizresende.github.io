@@ -29,12 +29,10 @@ function ContactMethods() {
 
       const response = await axios.post(`${apiUrl}email/send-email`, inputValues);
 
-      console.log(response);
-
       setError(null);
       setRequestMsg(response.data.message);
       setError(null);
-    } catch {
+    } catch (e) {
       setError('Erro ao tentar enviar mensagem');
     } finally {
       setIsLoading(false);
