@@ -8,11 +8,10 @@ interface Props {
   delay?: number;
   type?: 'up' | 'down' | 'right' | 'left';
   className?: string;
-  height?: 'fit-content' | '100%' | '80%' | '50%';
 }
 
 function Reveal({ children, width = 'fit-content', duration = 0.5,
-  delay = 0.25, type = 'down', className = '', height = 'fit-content',
+  delay = 0.25, type = 'down', className = '',
 }: Props) {
   const variants = {
     hidden: { opacity: 0, y: 75 },
