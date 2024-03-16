@@ -127,7 +127,7 @@ function ContactMethods() {
         </Form>
       </Reveal>
 
-      <Reveal delay={ 0.75 } width="fit-content" height="80%">
+      <Reveal delay={ 0.75 } width="fit-content">
         <hr />
       </Reveal>
 
