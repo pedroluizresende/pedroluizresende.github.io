@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import styles from './MainCardProject.module.css';
-import IProjects from '../../data/IProjects';
+import IProjects from '../../interfaces/IProject';
 import Reveal from '../reveal/Reveal';
 
 function MainCardProject({ project }: { project: IProjects }) {
@@ -35,7 +35,7 @@ function MainCardProject({ project }: { project: IProjects }) {
           width="100%"
           className={ styles.imgReveal }
         >
-          <img src={ project.images } alt={ project.title } />
+          <img src={ project.image } alt={ project.title } />
         </Reveal>
         <div className={ styles.details }>
 
@@ -56,9 +56,9 @@ function MainCardProject({ project }: { project: IProjects }) {
           <div className={ styles.description }>
             <ul>
               {
-                project.tags.map((tag) => (
-                  <Reveal key={ tag }>
-                    <li className={ styles.tag } key={ tag }>{ tag }</li>
+                project.tags.map((tag, index) => (
+                  <Reveal key={ `${tag.name}-${index}` }>
+                    <li className={ styles.tag } key={ tag.name }>{ tag.name }</li>
                   </Reveal>
                 ))
                 }

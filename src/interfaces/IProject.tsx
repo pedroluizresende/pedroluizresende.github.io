@@ -1,10 +1,12 @@
-export default interface IProjects {
+import { ITag } from './ITag';
+
+export default interface IProject {
   id: number;
   title: string;
   description: string;
-  images: string;
+  image: string;
   link: string;
-  tags: string[];
+  tags: ITag[];
   repository: string;
   main: boolean;
 }

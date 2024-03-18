@@ -1,4 +1,4 @@
-import IProjects from './IProjects';
+import IProjects from '../interfaces/IProject';
 import { logo } from './images/appReceitas';
 import logoTrybeTunes from './images/trybeTunes/logo-trybeTunes.png';
 

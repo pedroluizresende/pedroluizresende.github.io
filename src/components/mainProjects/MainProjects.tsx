@@ -1,10 +1,28 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import useSWR from 'swr';
 import styles from './MainProjects.module.css';
-import { projects } from '../../data/projects';
 import MainCardProject from '../mainCardProjects/MainCardProject';
 import Reveal from '../reveal/Reveal';
+import useFetch from '../../hooks/useFetch';
+import IProject from '../../interfaces/IProject';
+import fetcher from '../../utils/fetcher';
 
 function MainProjects({ id }: { id: string }) {
+  const [mainProjects, setMainProjects] = useState<IProject[]>([]);
+  const {
+    data,
+    error,
+    isLoading,
+  } = useSWR(`${import.meta.env.VITE_API_URL}projects`, fetcher);
+  useEffect(() => {
+    console.log(data);
+    console.log(isLoading);
+    console.log(error);
+  }, [data]);
+
+  if (isLoading) return <h1>Carregando...</h1>;
+
   return (
     <section
       className={ styles.mainProjects }
@@ -21,10 +39,19 @@ function MainProjects({ id }: { id: string }) {
         </h2>
       </Reveal>
 
-      <section className={ styles.projectsList }>
-        <MainCardProject project={ projects[0] } />
-        <MainCardProject project={ projects[1] } />
-      </section>
+      {
+        data.length < 1
+          ? <h1>Nenhum projeto disponível</h1>
+          : (
+            <section
+              className={ styles.projectsList }
+            >
+              <MainCardProject project={ data[0] as IProject } />
+
+              <MainCardProject project={ data[1] } />
+            </section>
+          )
+      }
 
       <p className={ styles.moreProjects }>
         Para acessar mais projetos
