@@ -1,24 +1,22 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import useSWR from 'swr';
+import { useEffect, useState } from 'react';
 import styles from './MainProjects.module.css';
 import MainCardProject from '../mainCardProjects/MainCardProject';
 import Reveal from '../reveal/Reveal';
-import useFetch from '../../hooks/useFetch';
 import IProject from '../../interfaces/IProject';
 import fetcher from '../../utils/fetcher';
 
 function MainProjects({ id }: { id: string }) {
-  const [mainProjects, setMainProjects] = useState<IProject[]>([]);
   const {
     data,
-    error,
     isLoading,
-  } = useSWR(`${import.meta.env.VITE_API_URL}projects`, fetcher);
+  } = useSWR(`${import.meta.env.VITE_API_URL}projects/main`, fetcher);
+
+  const [projects, setProjects] = useState<IProject[] | null>(null);
+
   useEffect(() => {
-    console.log(data);
-    console.log(isLoading);
-    console.log(error);
+    setProjects(data);
   }, [data]);
 
   if (isLoading) return <h1>Carregando...</h1>;
@@ -40,7 +38,7 @@ function MainProjects({ id }: { id: string }) {
       </Reveal>
 
       {
-        data.length < 1
+        !data
           ? <h1>Nenhum projeto disponível</h1>
           : (
             <section

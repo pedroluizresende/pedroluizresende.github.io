@@ -8,6 +8,8 @@ import Projects from './pages/Home/Projects';
 import Footer from './components/footer./Footer';
 import useScroll from './hooks/useScroll';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin/Admin';
+import CreateProject from './components/CreateProjectForm/CreateProject';
 
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -42,6 +44,8 @@ function App() {
         <Route path="/projetos" element={ <Projects /> } />
         <Route path="/contato" element={ <Contact /> } />
         <Route path="/" element={ <Home /> } />
+        <Route path="/admin" element={ <Admin /> } />
+        <Route path="/admin/create-project" element={ <CreateProject /> } />
       </Routes>
       <Footer />
     </main>

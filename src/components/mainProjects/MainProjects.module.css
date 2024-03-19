@@ -16,7 +16,6 @@
   gap: 3.3rem;
   flex-wrap: wrap;
   align-items: center;
-  height: 325px;
 }
 
 .mainProjects h2{
@@ -42,7 +41,7 @@
 .moreProjects a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.5s ease-in-out;
 }
 
 .moreProjects a:hover {

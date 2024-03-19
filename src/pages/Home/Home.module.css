@@ -52,7 +52,7 @@
 .arrowBtn {
     text-decoration: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s ease-in-out;
     font-size: 3rem;
     font-weight: 700;
     animation: upAndDown 1s infinite;

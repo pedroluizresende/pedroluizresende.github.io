@@ -20,7 +20,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
   border-radius: 5px;
   text-transform: uppercase;
   border: var(--secondary-color) 1px solid;

@@ -2,34 +2,33 @@ import { ref, uploadBytesResumable } from 'firebase/storage';
 import { useState } from 'react';
 import { storage } from '../firebase';
 
-function useFirebase(file: File) {
-  const [progress, setProgress] = useState(0);
+function useFirebase() {
+  const [progressUpdate, setProgressUpdate] = useState(0);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [imgUrl, setImgUrl] = useState<string>('');
 
-  const uploadImage = () => {
+  const upLoadImage = async (file: File) => {
+    if (file === null) return;
     const storageRef = ref(storage, `images/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on(
       'state_changed',
       (snapshot) => {
-        setProgress((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-        setErrorMsg(null);
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        setProgressUpdate(progress);
       },
       (error) => {
         setErrorMsg(error.message);
-      },
-      () => {
-        setImgUrl(imgUrl);
       },
     );
   };
 
   return {
-    uploadImage,
-    progress,
+    upLoadImage,
+    progressUpdate,
     errorMsg,
+    imgUrl,
   };
 }
 

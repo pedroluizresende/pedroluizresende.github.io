@@ -14,9 +14,6 @@ function MainCardProject({ project }: { project: IProjects }) {
     }
   };
 
-  useEffect(() => {
-  });
-
   return (
     <div
       className={ styles.mainCardProject }
@@ -57,15 +54,11 @@ function MainCardProject({ project }: { project: IProjects }) {
             <ul>
               {
                 project.tags.map((tag, index) => (
-                  <Reveal key={ `${tag.name}-${index}` }>
-                    <li className={ styles.tag } key={ tag.name }>{ tag.name }</li>
-                  </Reveal>
+                  <li className={ styles.tag } key={ tag.name }>{ tag.name }</li>
                 ))
                 }
             </ul>
-            <Reveal>
-              <Link to={ `/project/${project.id}` }>Ver mais</Link>
-            </Reveal>
+            <Link to={ `/project/${project.id}` }>Ver mais</Link>
           </div>
         )
       }
