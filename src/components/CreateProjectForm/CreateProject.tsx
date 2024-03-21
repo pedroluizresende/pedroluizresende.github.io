@@ -1,19 +1,16 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Form from '../Form';
 import styles from './CreateProject.module.css';
 import Input from '../Input';
-import IProject from '../../interfaces/IProject';
 import { ICategorie } from '../../interfaces/ICategorie';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Autocomplete from '../AutoComplete/Autocomplete';
 import { ITag } from '../../interfaces/ITag';
-import useFirebase from '../../hooks/useFirebase';
+import IProject from '../../interfaces/IProject';
 
 function CreateProject() {
-  const { upLoadImage, imgUrl } = useFirebase();
   const [categories, setCategories] = useState<ICategorie[]>([]);
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [tags, setTags] = useState<ITag[]>([]);
   const [projectFields, setProjectFields] = useState({
     title: '',
@@ -27,9 +24,10 @@ function CreateProject() {
   const [searchCategories, setSearchCategories] = useState<string>('');
   const [searchTags, setSearchTags] = useState<string>('');
   const [selectTags, setSelectTags] = useState<string[]>([]);
+
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/categories');
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}categories`);
       setCategories(response.data);
     } catch (error) {
       console.error(error);
@@ -38,7 +36,7 @@ function CreateProject() {
 
   const fetchTags = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/tags');
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}tags`);
       setTags(response.data);
     } catch (error) {
       console.error(error);
@@ -50,18 +48,8 @@ function CreateProject() {
     fetchTags();
   }, []);
 
-  const handleImage = (e: FormEvent<HTMLInputElement>) => {
-    const { files } = e.currentTarget;
-
-    if (files) {
-      setImageFile(files[0]);
-    }
-  };
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    upLoadImage(imageFile as File);
   };
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -72,13 +60,12 @@ function CreateProject() {
         ...projectFields,
         [name]: event.currentTarget.checked,
       });
-      return;
+    } else {
+      setProjectFields({
+        ...projectFields,
+        [name]: value,
+      });
     }
-
-    setProjectFields({
-      ...projectFields,
-      [name]: value,
-    });
   };
   return (
     <main
@@ -114,11 +101,11 @@ function CreateProject() {
           key="description"
         />
         <Input
-          type="file"
-          handleChange={ handleImage }
+          type="text"
           name="image"
-          placeHolder="Imagem"
+          placeHolder="Cole o link da imagem aqui"
           key="image"
+          handleChange={ handleChange }
         />
         <Input
           type="text"

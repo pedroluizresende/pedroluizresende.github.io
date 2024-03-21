@@ -3,15 +3,18 @@ import styles from './Input.module.css';
 type InputProps = {
   type?: string;
   name: string;
-  handleChange: (event: React.FormEvent<HTMLInputElement>) => void;
+  handleChange?: ((event: React.FormEvent<HTMLInputElement>) => void)
+  | ((event: React.ChangeEvent<HTMLInputElement>) => void);
   placeHolder: string;
+  ref?: React.Ref<HTMLInputElement> | null;
 };
 
 function Input({
   type = 'text',
   name,
-  handleChange,
+  handleChange = undefined,
   placeHolder,
+  ref = null,
 }: InputProps) {
   return (
     <label
@@ -25,6 +28,7 @@ function Input({
         onChange={ handleChange }
         aria-labelledby={ `${name}-label` }
         placeholder={ placeHolder }
+        ref={ ref }
       />
     </label>
   );

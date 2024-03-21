@@ -64,6 +64,7 @@ function Autocomplete({
           placeholder={ placeHolder }
           aria-labelledby={ `${name}-label` }
           value={ value }
+          key={ key }
         />
         {
         (value.length > 0 && !valueEqual) && (
@@ -94,6 +95,7 @@ function Autocomplete({
         onChange={ handleChange }
         placeholder={ placeHolder }
         aria-labelledby={ `${name}-label` }
+        key={ key }
       />
       {
         notExist && (
