@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Autocomplete from '../AutoComplete/Autocomplete';
 import { ITag } from '../../interfaces/ITag';
 import IProject from '../../interfaces/IProject';
+import useFirebaseStorage from '../../hooks/useFirebaseStorage';
 
 function CreateProject() {
   const [categories, setCategories] = useState<ICategorie[]>([]);
@@ -21,9 +22,11 @@ function CreateProject() {
     repository: '',
     mainProject: false,
   });
+  const [image, setImage] = useState<File | null>(null);
   const [searchCategories, setSearchCategories] = useState<string>('');
   const [searchTags, setSearchTags] = useState<string>('');
   const [selectTags, setSelectTags] = useState<string[]>([]);
+  const { handleUpload, imageUrl } = useFirebaseStorage();
 
   const fetchCategories = async () => {
     try {
@@ -48,8 +51,21 @@ function CreateProject() {
     fetchTags();
   }, []);
 
+  const handleInputFile = (event: React.FormEvent<HTMLInputElement>) => {
+    const { files } = event.currentTarget;
+    if (files) {
+      setImage(files[0]);
+    }
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    await handleUpload(image as File);
+
+    const project: IProject = {
+      title: projectFields.title,
+      description: projectFields.description,
+    };
   };
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -101,11 +117,11 @@ function CreateProject() {
           key="description"
         />
         <Input
-          type="text"
+          type="file"
+          handleChange={ handleInputFile }
           name="image"
-          placeHolder="Cole o link da imagem aqui"
+          placeHolder="Imagem"
           key="image"
-          handleChange={ handleChange }
         />
         <Input
           type="text"

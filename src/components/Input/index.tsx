@@ -7,6 +7,7 @@ type InputProps = {
   | ((event: React.ChangeEvent<HTMLInputElement>) => void);
   placeHolder: string;
   ref?: React.Ref<HTMLInputElement> | null;
+  autoComplete?: string;
 };
 
 function Input({
@@ -15,6 +16,7 @@ function Input({
   handleChange = undefined,
   placeHolder,
   ref = null,
+  autoComplete = 'off',
 }: InputProps) {
   return (
     <label

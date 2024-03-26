@@ -89,6 +89,21 @@ function Admin() {
     isLoading,
   } = useSWR(`${import.meta.env.VITE_API_URL}projects`, fetcher);
 
+  const verifyToken = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}auth/verify`, {
+        headers: {
+          Authorization: token,
+        },
+      });
+
+      console.log(response);
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     const tokenFromStorage = localStorage.getItem('token');
     if (tokenFromStorage) {
@@ -96,6 +111,10 @@ function Admin() {
       seLogin(true);
     } else {
       seLogin(false);
+    }
+
+    if (token) {
+      verifyToken();
     }
   });
 
